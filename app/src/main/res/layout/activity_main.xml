@@ -23,7 +23,7 @@
         android:layout_marginTop="65dp"
         android:id="@+id/txtEmail"
         android:hint="Email"
-        android:background="@android:color/holo_purple"
+        android:background="@color/colorPrimary"
         android:padding="8dp" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_alignLeft="@+id/txtEmail"
         android:layout_alignStart="@+id/txtEmail"
         android:hint="Password"
-        android:background="@android:color/holo_purple"
+        android:background="@color/colorPrimary"
         android:padding="8dp" />
 
     <Button
