@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">irupana</string>
+    <string name="title_activity_menu_principal">MenuPrincipal</string>
 </resources>

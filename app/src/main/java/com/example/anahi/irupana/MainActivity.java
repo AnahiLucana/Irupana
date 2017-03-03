@@ -19,11 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtPassword;
     private Button btnLogin;
     private TextView txtRegistrarse;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        context=this;
         txtEmail=(EditText)findViewById(R.id.txtEmail);
         txtPassword=(EditText)findViewById(R.id.txtPassword);
         btnLogin=(Button)findViewById(R.id.btnLogin);
@@ -35,12 +38,19 @@ public class MainActivity extends AppCompatActivity {
                 String campo_usuario = txtEmail.getText().toString();
                 String campo_password = txtPassword.getText().toString();
 
-                if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0)
+                if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
                     txtRegistrarse.setText("Login aceptado");
-                else
-                    txtRegistrarse.setText("Login fallido");
+
+                    Intent menu = new Intent(context, MenuPrincipal.class);
+                    startActivity(menu);
+                }else{
+                    txtRegistrarse.setText("Login Fallido");
+
+                }
             }
-        });
+
+            }
+        );
 
 
     }
