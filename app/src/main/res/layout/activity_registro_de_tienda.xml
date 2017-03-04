@@ -8,7 +8,7 @@
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblCNombre"
+        android:id="@+id/lblTNombre"
         tools:text="Nombre"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp" />
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/txtCNombre"
+        android:id="@+id/txtTNombre"
         android:background="@android:color/holo_orange_dark"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="20dp"
@@ -31,19 +31,19 @@
         android:textColorLink="@android:color/background_dark" />
 
     <TextView
-        android:text="Apellido"
+        android:text="E-mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblCApellido"
+        android:id="@+id/lblTEmail"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textEmailSubject"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/txtTEmail"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="50dp"
         android:layout_marginTop="5dp"
@@ -54,7 +54,7 @@
         android:text="Contraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblPassword"
+        android:id="@+id/lblTPassword"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp" />
 
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/txtCPassword"
+        android:id="@+id/txtTPassword"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
@@ -74,7 +74,7 @@
         android:text="Repetir contraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblCRepetirPassword"
+        android:id="@+id/lblTRepetirPassword"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp" />
 
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/txtCRepetirPassword"
+        android:id="@+id/txtTRepetirPassword"
         android:background="@android:color/holo_orange_dark"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="20dp"
@@ -94,7 +94,7 @@
         android:text="NIT/Carnet (Dato utilizado para las facturas)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblCNIt"
+        android:id="@+id/lblTNit"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp" />
 
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/txtCNit"
+        android:id="@+id/txtTNit"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
@@ -114,7 +114,7 @@
         android:text="Crear cuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCrearCuentaComoCliente"
+        android:id="@+id/btnCrearCuentaComoTienda"
         android:layout_marginTop="50dp"
         android:layout_marginStart="120dp"
         android:padding="20dp" />

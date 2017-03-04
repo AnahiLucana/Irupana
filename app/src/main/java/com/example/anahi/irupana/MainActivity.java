@@ -4,13 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         context=this;
         txtEmail=(EditText)findViewById(R.id.txtEmail);
-        txtPassword=(EditText)findViewById(R.id.txtPassword);
+        txtPassword=(EditText)findViewById(R.id.txtTPassword);
         btnLogin=(Button)findViewById(R.id.btnLogin);
         txtRegistrarse=(TextView)findViewById(R.id.txtRegistrarse);
 
@@ -49,8 +46,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+
             }
+
         );
+
+        txtRegistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a=new Intent(context,ElegirTipoDeRegistroActivity.class);
+                startActivity(a);
+            }
+        });
 
 
     }
