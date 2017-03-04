@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblNombre"
+        tools:text="Nombre"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+    <requestFocus
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNombre"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:text="Apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblApellido"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:text="Contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPassword"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txtPassword"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:text="Repetir contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblRepetirPassword"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txtRepetirPassword"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:text="NIT/Carnet (Dato utilizado para las facturas)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblNit"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtNit"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_orange_dark" />
+
+    <Button
+        android:text="Registrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegistrarseComoCliente"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="120dp" />
+</LinearLayout>
