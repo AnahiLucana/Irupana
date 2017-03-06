@@ -43,12 +43,32 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/txtCApellido"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="50dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/holo_orange_dark"
         android:padding="10dp" />
+
+    <TextView
+        android:text="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblCEmail"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailSubject"
+        android:ems="10"
+        android:id="@+id/txtCEmail"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:background="@android:color/holo_orange_dark" />
 
     <TextView
         android:text="Contraseña"
