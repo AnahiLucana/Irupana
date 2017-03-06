@@ -47,13 +47,13 @@
                     <ImageView
                         android:layout_width="172dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/productosApicolas"
+                        app:srcCompat="@drawable/productos_apicolas"
                         android:id="@+id/imgMiel" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="109dp"
-                        app:srcCompat="@drawable/productosCafe"
+                        app:srcCompat="@drawable/productos_cafe"
                         android:id="@+id/imgCafe"
                         android:layout_marginTop="50dp" />
                 </LinearLayout>
@@ -66,13 +66,13 @@
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/productosBarras"
+                        app:srcCompat="@drawable/productos_barras"
                         android:id="@+id/imgBarritas" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/productosPanes"
+                        app:srcCompat="@drawable/productos_panes"
                         android:id="@+id/imgPan"
                         android:layout_weight="1"
                         android:layout_marginTop="45dp" />
