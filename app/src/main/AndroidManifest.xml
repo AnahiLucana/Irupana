@@ -18,6 +18,10 @@
         <activity
             android:name=".MenuPrincipal"
             android:label="@string/title_activity_menu_principal"></activity>
+
+        <activity
+            android:name=".ElegirTipoDeRegistroActivity"
+            android:label="tipo de registro"></activity>
     </application>
 
 </manifest>
