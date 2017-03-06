@@ -22,6 +22,12 @@
         <activity
             android:name=".ElegirTipoDeRegistroActivity"
             android:label="tipo de registro"></activity>
+        <activity
+            android:name=".RegistroDeTiendaActivity"
+            android:label="tipo de registro"></activity>
+        <activity
+            android:name=".RegistroDeClienteActivity"
+            android:label="tipo de registro"></activity>
     </application>
 
 </manifest>
