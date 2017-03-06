@@ -28,6 +28,19 @@
         <activity
             android:name=".RegistroDeClienteActivity"
             android:label="tipo de registro"></activity>
+        <activity
+            android:name=".BarrasActivity"
+            android:label="Barras"></activity>
+        <activity
+            android:name=".CafeActivity"
+            android:label="cafe"></activity>
+        <activity
+            android:name=".MielActivity"
+            android:label="miel"></activity>
+        <activity
+            android:name=".PanActivity"
+            android:label="pan"></activity>
+
     </application>
 
 </manifest>
