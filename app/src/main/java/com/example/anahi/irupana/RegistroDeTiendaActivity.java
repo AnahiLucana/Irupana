@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * Created by Ing. Rafael Serate on 04/03/17.
@@ -14,6 +15,13 @@ import android.widget.Button;
 public class RegistroDeTiendaActivity  extends AppCompatActivity{
     private Button btnCrearCuentaComoTienda;
     private Context context;
+
+    private EditText txtTNombre;
+
+    private EditText txtTEmail;
+    private EditText txtTPassword;
+    private EditText txtTRepetirPassword;
+    private EditText txtTNit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +29,27 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
         context=this;
         btnCrearCuentaComoTienda=(Button)findViewById(R.id.btnCrearCuentaComoTienda);
 
+        txtTNombre=(EditText)findViewById(R.id.txtTNombre) ;
+        txtTEmail=(EditText)findViewById(R.id.txtTEmail) ;
+        txtTPassword=(EditText)findViewById(R.id.txtTPassword);
+        txtTRepetirPassword=(EditText)findViewById(R.id.txtTRepetirPassword);
+        txtTNit=(EditText)findViewById(R.id.txtTNit);
+
 
         btnCrearCuentaComoTienda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a=new Intent(context,MenuPrincipal.class);
-                startActivity(a);
+                String campo_nombre = txtTNombre.getText().toString();
+                String campo_email = txtTEmail.getText().toString();
+                String campo_password = txtTPassword.getText().toString();
+                String campo_repetir_password = txtTRepetirPassword.getText().toString();
+                String campo_nit = txtTNit.getText().toString();
+
+                if (campo_nombre.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0
+                        && campo_email.compareTo("irupana")==0&& campo_nit.compareTo("irupana")==0&&campo_repetir_password.compareTo("irupana")==0) {
+                    Intent a=new Intent(context,MenuPrincipal.class);
+                    startActivity(a);
+                }
             }
         });
 

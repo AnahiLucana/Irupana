@@ -35,6 +35,7 @@ public class RegistroDeClienteActivity extends AppCompatActivity{
         txtCEmail=(EditText)findViewById(R.id.txtCEmail) ;
         txtCPassword=(EditText)findViewById(R.id.txtCPassword);
         txtCRepetirPassword=(EditText)findViewById(R.id.txtCRepetirPassword);
+        txtCNit=(EditText)findViewById(R.id.txtCNit);
 
         btnCrearCuentaComoCliente.setOnClickListener(new View.OnClickListener() {
             @Override
