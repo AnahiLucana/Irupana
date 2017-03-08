@@ -2,12 +2,14 @@ package com.example.anahi.irupana;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView txtRegistrarse;
     private Context context;
+
+    String nombre_ingresado;
+    String password_ingresado;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,23 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String campo_usuario = txtEmail.getText().toString();
                 String campo_password = txtPassword.getText().toString();
+
+                //Abrimos el archivo de preferencias
+                SharedPreferences prefs =
+                        getSharedPreferences("MisPreferencias",Context.MODE_PRIVATE);
+
+                //Editamos los campos existentes
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("usuario", nombre_ingresado);
+                editor.putString("password", password_ingresado);
+                //Concretamos la edicion
+                editor.commit();
+
+                Toast.makeText(getApplicationContext(), "Usuario: " + nombre_ingresado + ", Password: " + password_ingresado, Toast.LENGTH_SHORT).show();
+
+                Intent a=new Intent(getApplicationContext(),MenuPrincipal.class);
+                startActivity(a);
+                finish();
 
                 if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
                     txtRegistrarse.setText("Login aceptado");
