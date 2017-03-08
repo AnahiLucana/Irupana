@@ -58,8 +58,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtRegistrarse"
         android:textStyle="bold|italic"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:layout_marginBottom="66dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorPrimary" />
 </RelativeLayout>
