@@ -48,7 +48,7 @@ public class RegistroDeClienteActivity extends AppCompatActivity{
                 String campo_nit = txtCNit.getText().toString();
 
                 if (campo_nombre.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0 &&campo_apellido.compareTo("irupana")==0
-                && campo_email.compareTo("irupana")==0&& campo_nit.compareTo("irupana")==0&&campo_repetir_password.compareTo("irupana")==0) {
+                && campo_email.compareTo("irupana")==0&& campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
                     Intent a = new Intent(context, MenuPrincipal.class);
                     startActivity(a);
                 }
