@@ -1,7 +1,9 @@
 package com.example.anahi.irupana;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,12 +38,39 @@ public class MainActivity extends AppCompatActivity {
                 String campo_password = txtPassword.getText().toString();
 
                 if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
-                    txtRegistrarse.setText("Login aceptado");
+                    AlertDialog dialogo;
+                    AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Bienvenido");
+                    builder.setMessage("Bienvenido al Menu de Irupana");
+                    dialogo=builder.create();
+                    dialogo.getWindow().getAttributes().windowAnimations=R.style.transicion;
+                    dialogo.show();
+                    dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+
+                        }
+                    });
+
 
                     Intent menu = new Intent(context, MenuPrincipal.class);
                     startActivity(menu);
                 }else{
-                    txtRegistrarse.setText("Login Fallido");
+                    AlertDialog dialogo;
+                    AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Login Fallido");
+                    builder.setMessage("Ingreso mal el Email o el Password");
+                    dialogo=builder.create();
+                    dialogo.getWindow().getAttributes().windowAnimations=R.style.transicion;
+                    dialogo.show();
+                    dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+
+                        }
+                    });
+
+
 
                 }
             }
