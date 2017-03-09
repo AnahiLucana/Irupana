@@ -1,6 +1,8 @@
 package com.example.anahi.irupana;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         txtPassword=(EditText)findViewById(R.id.txtTPassword);
         btnLogin=(Button)findViewById(R.id.btnLogin);
         txtRegistrarse=(TextView)findViewById(R.id.txtRegistrarse);
+
+
 
         //Evento de click en el botón
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         );
+
 
         txtRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
