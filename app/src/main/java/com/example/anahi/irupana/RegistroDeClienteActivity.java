@@ -9,9 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-/**
- * Created by Ing. Rafael Serate on 04/03/17.
- */
 
 public class RegistroDeClienteActivity extends AppCompatActivity{
 

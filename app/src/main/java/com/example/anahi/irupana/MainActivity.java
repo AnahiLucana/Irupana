@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtRegistrarse;
     private Context context;
 
-    String nombre_ingresado;
-    String password_ingresado;
+
 
 
     @Override
@@ -47,26 +46,26 @@ public class MainActivity extends AppCompatActivity {
 
                 //Editamos los campos existentes
                 SharedPreferences.Editor editor = prefs.edit();
-                editor.putString("usuario", nombre_ingresado);
-                editor.putString("password", password_ingresado);
+                editor.putString("usuario", campo_usuario);
+                editor.putString("password", campo_password);
                 //Concretamos la edicion
                 editor.commit();
 
-                Toast.makeText(getApplicationContext(), "Usuario: " + nombre_ingresado + ", Password: " + password_ingresado, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Usuario: " + campo_usuario + ", Password: " + campo_password, Toast.LENGTH_SHORT).show();
 
                 Intent a=new Intent(getApplicationContext(),MenuPrincipal.class);
                 startActivity(a);
                 finish();
 
-                if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
-                    txtRegistrarse.setText("Login aceptado");
+                //if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
+                  //  txtRegistrarse.setText("Login aceptado");
 
-                    Intent menu = new Intent(context, MenuPrincipal.class);
-                    startActivity(menu);
-                }else{
-                    txtRegistrarse.setText("Login Fallido");
+                    //Intent menu = new Intent(context, MenuPrincipal.class);
+                    //startActivity(menu);
+                //}else{
+                  //  txtRegistrarse.setText("Login Fallido");
 
-                }
+                //}
             }
 
 
