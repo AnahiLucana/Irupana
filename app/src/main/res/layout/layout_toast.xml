@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            app:srcCompat="@drawable/productos_barras"
+            android:id="@+id/imageView"
+            android:layout_weight="0.31" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="103dp"
+            android:layout_height="93dp">
+
+            <TextView
+                android:text="texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/texto" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
