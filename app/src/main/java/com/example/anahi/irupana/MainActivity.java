@@ -1,9 +1,7 @@
 package com.example.anahi.irupana;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,43 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 String campo_password = txtPassword.getText().toString();
 
                 if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
-                    AlertDialog dialogo;
-
-                    AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("Ingreso");
-                    builder.setMessage("Bienvenido usted ingreso a el menu de Irupana ");
-                    dialogo=builder.create();
-                    dialogo.getWindow().getAttributes().windowAnimations=R.style.transicion;
-                    dialogo.show();
-                    dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                        @Override
-                        public void onCancel(DialogInterface dialog) {
-
-                        }
-
-                    });
-
-
-
+                    txtRegistrarse.setText("Login aceptado");
 
                     Intent menu = new Intent(context, MenuPrincipal.class);
                     startActivity(menu);
                 }else{
-                    AlertDialog dialogo;
-
-                    AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("Login fallido");
-                    builder.setMessage("Su email o password son erroneos  ");
-                    dialogo=builder.create();
-                    dialogo.getWindow().getAttributes().windowAnimations=R.style.transicion;
-                    dialogo.show();
-                    dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                        @Override
-                        public void onCancel(DialogInterface dialog) {
-
-                        }
-
-                    });
+                    txtRegistrarse.setText("Login Fallido");
 
                 }
             }

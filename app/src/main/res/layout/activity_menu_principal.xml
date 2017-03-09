@@ -44,6 +44,13 @@
                     android:layout_height="220dp"
                     android:weightSum="1">
 
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:layout_weight="1" />
+
                     <ImageView
                         android:layout_width="172dp"
                         android:layout_height="wrap_content"
