@@ -50,29 +50,25 @@ public class RegistroDeClienteActivity extends AppCompatActivity{
 
                 if (campo_nombre.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0 &&campo_apellido.compareTo("irupana")==0
                 && campo_email.compareTo("irupana")==0&& campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
+                    AlertDialog dialogo;
+                    AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeClienteActivity.this);
+
+                    builder.setTitle(campo_nombre);
+                    builder.setMessage("Tu registro se realizo exitosamente");
+                    dialogo = builder.create();
+                    dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
+                    dialogo.show();
+                    dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        public void onCancel(DialogInterface dialog) {
+                            dialog.dismiss();
+                        }
+                    });
                     Intent a = new Intent(context, MenuPrincipal.class);
                     startActivity(a);
                 }
             }
         });
-        DialogAnimado.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
-                AlertDialog dialogo;
-                AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeClienteActivity.this);
 
-                builder.setTitle("Registro como cliente");
-                builder.setMessage("Tu registro se realizo exitosamente");
-                dialogo = builder.create();
-                dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
-                dialogo.show();
-                dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                    public void onCancel(DialogInterface dialog) {
-                        dialog.dismiss();
-                    }
-                });
-            }
-        });
 
     }
 

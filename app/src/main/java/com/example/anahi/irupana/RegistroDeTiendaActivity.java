@@ -1,12 +1,21 @@
 package com.example.anahi.irupana;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Ing. Rafael Serate on 04/03/17.
@@ -22,6 +31,7 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
     private EditText txtTPassword;
     private EditText txtTRepetirPassword;
     private EditText txtTNit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +62,9 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
                 }
             }
         });
+
+
+
 
     }
 }

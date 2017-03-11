@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 String campo_usuario = txtEmail.getText().toString();
                 String campo_password = txtPassword.getText().toString();
 
-                if (campo_usuario.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0) {
+                if (campo_usuario.compareTo("irupana@gmail.com") == 0 && campo_password.compareTo("irupana") == 0) {
                     AlertDialog dialogo;
                     AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle("Bienvenido");
@@ -97,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle("Login Fallido");
                     builder.setMessage("Ingreso mal el Email o el Password");
+
+
                     dialogo=builder.create();
                     dialogo.getWindow().getAttributes().windowAnimations=R.style.transicion;
                     dialogo.show();
