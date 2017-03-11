@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * Created by Ing. Rafael Serate on 04/03/17.
+ */
 
 public class PanActivity extends AppCompatActivity {
 
