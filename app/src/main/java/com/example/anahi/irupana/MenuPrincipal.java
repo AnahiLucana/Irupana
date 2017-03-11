@@ -2,11 +2,12 @@ package com.example.anahi.irupana;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MenuPrincipal extends AppCompatActivity {
 
@@ -56,11 +57,27 @@ public class MenuPrincipal extends AppCompatActivity {
         imgPan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a=new Intent(context,PanActivity.class);
-                startActivity(a);
+                logout();
+
+                /*Intent a=new Intent(context,PanActivity.class);
+                startActivity(a);*/
             }
         });
 
     }
 
+    private void logout(){
+        Toast.makeText(getApplicationContext(),
+                "Cerrando sesión.", Toast.LENGTH_SHORT).show();
+
+        SharedPreferences prefs =
+                getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.clear();
+        editor.commit();
+        Intent a = new Intent(getApplicationContext(), MainActivity.class);
+        finish();
+        startActivity(a);
+    }
 }
