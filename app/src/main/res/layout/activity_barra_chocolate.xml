@@ -23,5 +23,12 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/irupana4"
             android:id="@+id/imgsol" />
+
+        <TextView
+            android:text="Barras de Chocolate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/barrachoco"
+            android:textSize="18sp" />
     </LinearLayout>
 </RelativeLayout>
