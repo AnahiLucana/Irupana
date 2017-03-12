@@ -17,30 +17,29 @@
         </activity>
         <activity
             android:name=".MenuPrincipal"
-            android:label="@string/title_activity_menu_principal"></activity>
-
+            android:label="@string/title_activity_menu_principal" />
         <activity
             android:name=".ElegirTipoDeRegistroActivity"
-            android:label="tipo de registro"></activity>
+            android:label="tipo de registro" />
         <activity
             android:name=".RegistroDeTiendaActivity"
-            android:label="tipo de registro"></activity>
+            android:label="tipo de registro" />
         <activity
             android:name=".RegistroDeClienteActivity"
-            android:label="tipo de registro"></activity>
+            android:label="tipo de registro" />
         <activity
             android:name=".BarrasActivity"
-            android:label="Barras"></activity>
+            android:label="Barras" />
         <activity
             android:name=".CafeActivity"
-            android:label="cafe"></activity>
+            android:label="cafe" />
         <activity
             android:name=".MielActivity"
-            android:label="miel"></activity>
+            android:label="miel" />
         <activity
             android:name=".PanActivity"
-            android:label="pan"></activity>
-
+            android:label="pan" />
+        <activity android:name=".barraChocolate"></activity>
     </application>
 
 </manifest>

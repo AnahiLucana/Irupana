@@ -14,7 +14,7 @@ public class BarrasActivity extends AppCompatActivity {
     ListView ListView;
 
 
-String[] valores = new String[]{"barra de Chocolate","barra de frutos rojos","barra de ajonjoli","barra de coco"};
+String[] valores = new String[]{"Barra de Chocolate","barra de frutos rojos","barra de ajonjoli","barra de coco"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
