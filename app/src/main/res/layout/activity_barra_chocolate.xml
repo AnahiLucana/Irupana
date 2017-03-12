@@ -30,5 +30,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/barrachoco"
             android:textSize="18sp" />
+
+        <TextView
+            android:text="Ingredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingre"
+            android:textSize="@dimen/activity_vertical_margin" />
     </LinearLayout>
 </RelativeLayout>
