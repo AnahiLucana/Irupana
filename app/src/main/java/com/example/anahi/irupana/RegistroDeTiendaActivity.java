@@ -1,16 +1,24 @@
 package com.example.anahi.irupana;
 
+import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-/**
- * Created by Ing. Rafael Serate on 04/03/17.
- */
 
 public class RegistroDeTiendaActivity  extends AppCompatActivity{
     private Button btnCrearCuentaComoTienda;
@@ -22,6 +30,8 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
     private EditText txtTPassword;
     private EditText txtTRepetirPassword;
     private EditText txtTNit;
+    private Button DialogAnimado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +44,7 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
         txtTPassword=(EditText)findViewById(R.id.txtTPassword);
         txtTRepetirPassword=(EditText)findViewById(R.id.txtTRepetirPassword);
         txtTNit=(EditText)findViewById(R.id.txtTNit);
+        DialogAnimado=(Button)findViewById(R.id.btnCrearCuentaComoTienda);
 
 
         btnCrearCuentaComoTienda.setOnClickListener(new View.OnClickListener() {
@@ -44,14 +55,30 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
                 String campo_password = txtTPassword.getText().toString();
                 String campo_repetir_password = txtTRepetirPassword.getText().toString();
                 String campo_nit = txtTNit.getText().toString();
+                if (campo_password.compareTo("irupana") == 0 && campo_email.compareTo("irupana@gmail.com")==0&&
+                        campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
+                    AlertDialog dialogo;
+                    AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeTiendaActivity.this);
 
-                if (campo_nombre.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0
-                        && campo_email.compareTo("irupana")==0&& campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
-                    Intent a=new Intent(context,MenuPrincipal.class);
+                    builder.setTitle(campo_nombre);
+                    builder.setMessage("Tu registro se realizo exitosamente");
+                    dialogo = builder.create();
+                    dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
+                    dialogo.show();
+                    dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        public void onCancel(DialogInterface dialog) {
+                            dialog.dismiss();
+                        }
+                    });
+                    Intent a = new Intent(context, MenuPrincipal.class);
                     startActivity(a);
                 }
             }
-        });
 
+
+
+
+
+        });
     }
 }
