@@ -18,95 +18,193 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true">
-
-            <TextView
-                android:text="Menu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Menu"
-                android:textSize="24sp"
-                android:textStyle="bold|italic"
-                android:gravity="center_horizontal" />
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:weightSum="1">
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true">
 
                     <TextView
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView"
-                        android:layout_weight="1" />
-
-                    <ImageView
-                        android:layout_width="172dp"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/productos_apicolas"
-                        android:id="@+id/imgMiel" />
-
-                    <ImageView
+                        android:text="Menu"
                         android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        app:srcCompat="@drawable/productos_cafe"
-                        android:id="@+id/imgCafe"
-                        android:layout_marginTop="50dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="193dp">
-
-                    <ImageView
-                        android:layout_width="174dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/productos_barras"
-                        android:id="@+id/imgBarritas" />
+                        android:id="@+id/Menu"
+                        android:textSize="24sp"
+                        android:textStyle="bold|italic"
+                        android:gravity="center_horizontal" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/producto_panes"
-                        android:id="@+id/imgPan"
-                        android:layout_weight="1"
-                        android:layout_marginTop="45dp" />
-                </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="158dp">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="219dp"
+                            android:weightSum="1">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/irupa5"
-                        android:id="@+id/imageView3"
-                        android:layout_weight="1" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="176dp"
+                                android:layout_height="match_parent"
+                                android:weightSum="1">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/irupa10"
-                        android:id="@+id/imageView2"
-                        android:layout_weight="1" />
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="116dp"
+                                    app:srcCompat="@drawable/productos_apicolas"
+                                    android:id="@+id/imgMiel"
+                                    android:layout_weight="0.22" />
+
+                                <TextView
+                                    android:text="miel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="1">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="119dp"
+                                    app:srcCompat="@drawable/productos_cafe"
+                                    android:id="@+id/imgCafe"
+                                    android:layout_weight="0.15" />
+
+                                <TextView
+                                    android:text="Cafe"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView6"
+                                    android:layout_weight="0.15"
+                                    android:gravity="center_horizontal|center"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="193dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="175dp"
+                                    android:layout_height="111dp"
+                                    app:srcCompat="@drawable/productos_barras"
+                                    android:id="@+id/imgBarritas" />
+
+                                <TextView
+                                    android:text="barras"
+                                    android:layout_width="175dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView7"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="171dp"
+                                    android:layout_height="113dp"
+                                    app:srcCompat="@drawable/producto_panes"
+                                    android:id="@+id/imgPan" />
+
+                                <TextView
+                                    android:text="Pan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView8"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="158dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="175dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    app:srcCompat="@drawable/ofertas"
+                                    android:id="@+id/imgOfertas" />
+
+                                <TextView
+                                    android:text="ofertas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView9"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="1">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="106dp"
+                                    app:srcCompat="@drawable/tienda"
+                                    android:id="@+id/imgTienda"
+                                    android:layout_weight="0.03" />
+
+                                <TextView
+                                    android:text="nuestras tiendas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView10"
+                                    android:layout_weight="0.03"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
+        </ScrollView>
 
-        </LinearLayout>
     </RelativeLayout>
 
 </RelativeLayout>
