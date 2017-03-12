@@ -59,6 +59,7 @@ public class MenuPrincipal extends AppCompatActivity {
             public void onClick(View view) {
                 logout();
 
+
                 /*Intent a=new Intent(context,PanActivity.class);
                 startActivity(a);*/
             }

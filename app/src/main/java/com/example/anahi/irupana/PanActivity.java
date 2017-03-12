@@ -11,7 +11,7 @@ public class PanActivity extends AppCompatActivity {
 
     ListView ListView;
 
-    String[] valores = new String[]{"Pan Chamillo","Pan de semillas","Pan de Quinua","Pan de soya","Pan de Anis","Pan de avena","pan de Wilkaparu","pan molde"};
+    String[] valores = new String[]{"Pan Chamillo","Pan de semillas","Pan de Quinua"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
