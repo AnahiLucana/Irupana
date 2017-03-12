@@ -1,11 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <ListView
-        android:id="@+id/lista"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/irupana4"
+                android:id="@+id/Bdc" />
+
+            <TextView
+                android:text="Barras de chocolate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipobarra1"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/irupa5"
+                android:id="@+id/imageButton4" />
+
+            <TextView
+                android:text="Barras de frutos rojos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipobarra2"
+                android:layout_weight="0.68"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/activity_vertical_margin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/irupa6"
+                android:id="@+id/imageButton3"
+                android:paddingEnd="10dp"
+                android:paddingStart="15dp" />
+
+            <TextView
+                android:text="Barras de ajonjoli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipobarratres"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/irupa10"
+                android:id="@+id/imageButton2"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:text="Barras de coco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipobarracua"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

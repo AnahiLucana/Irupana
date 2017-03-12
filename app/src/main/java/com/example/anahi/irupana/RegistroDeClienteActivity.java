@@ -48,8 +48,8 @@ public class RegistroDeClienteActivity extends AppCompatActivity{
                 String campo_repetir_password = txtCRepetirPassword.getText().toString();
                 String campo_nit = txtCNit.getText().toString();
 
-                if (campo_nombre.compareTo("irupana") == 0 && campo_password.compareTo("irupana") == 0 &&campo_apellido.compareTo("irupana")==0
-                && campo_email.compareTo("irupana")==0&& campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
+                if ( campo_nombre.compareTo("irupana")==0 && campo_apellido.compareTo("irupana")==0&& campo_email.compareTo ("irupana@gmail.com")==0
+                && campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0 && campo_password.compareTo("irupana")==0) {
                     AlertDialog dialogo;
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeClienteActivity.this);
 

@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.anahi.irupana.MenuPrincipal">
+    tools:context="com.example.anahi.irupana.MenuPrincipal"
+    android:background="?attr/colorBackgroundFloating">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,9 +30,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Menu"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold|italic"
-                android:gravity="center_horizontal" />
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/background_light"
+                android:background="@android:color/transparent" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -44,25 +47,17 @@
                     android:layout_height="220dp"
                     android:weightSum="1">
 
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView"
-                        android:layout_weight="1" />
-
                     <ImageView
-                        android:layout_width="172dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="178dp"
+                        android:layout_height="match_parent"
                         app:srcCompat="@drawable/productos_apicolas"
                         android:id="@+id/imgMiel" />
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="109dp"
+                        android:layout_height="match_parent"
                         app:srcCompat="@drawable/productos_cafe"
-                        android:id="@+id/imgCafe"
-                        android:layout_marginTop="50dp" />
+                        android:id="@+id/imgCafe" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -79,10 +74,10 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/productos_panes"
+                        app:srcCompat="@drawable/producto_panes"
                         android:id="@+id/imgPan"
-                        android:layout_weight="1"
-                        android:layout_marginTop="45dp" />
+                        android:layout_weight="1" />
+
                 </LinearLayout>
             </LinearLayout>
 
