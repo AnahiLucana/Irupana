@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anahi.irupana.MainActivity"
-    android:background="@drawable/fondoirupa">
+    android:background="@drawable/irupanafondobien">
 
     <EditText
         android:layout_width="wrap_content"
@@ -18,9 +18,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/txtEmail"
         android:hint="Email"
         android:background="@color/colorPrimary"
@@ -38,19 +37,8 @@
         android:layout_alignStart="@+id/txtEmail"
         android:hint="Password"
         android:background="@color/colorPrimary"
-        android:padding="8dp" />
-
-    <Button
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
-        android:layout_marginTop="57dp"
-        android:background="@android:color/holo_orange_dark"
-        android:paddingEnd="5dp"
-        android:paddingStart="5dp"
-        android:layout_below="@+id/txtTPassword"
-        android:layout_centerHorizontal="true" />
+        android:padding="8dp"
+        android:layout_marginStart="50dp" />
 
     <TextView
         android:text="Registrarse"
@@ -59,9 +47,25 @@
         android:id="@+id/txtRegistrarse"
         android:textStyle="bold|italic"
         android:textSize="28sp"
-        android:layout_marginBottom="66dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/darker_gray"
-        android:textColor="@android:color/background_light" />
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignLeft="@+id/txtTPassword"
+        android:layout_alignStart="@+id/txtTPassword"
+        android:layout_marginTop="46dp" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_marginTop="63dp"
+        android:background="@android:color/holo_orange_dark"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:layout_below="@+id/txtTPassword"
+        android:layout_alignLeft="@+id/txtRegistrarse"
+        android:layout_alignStart="@+id/txtRegistrarse"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp" />
 </RelativeLayout>

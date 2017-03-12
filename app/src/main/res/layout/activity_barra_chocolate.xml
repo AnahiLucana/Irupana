@@ -18,11 +18,11 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true">
 
-        <ImageButton
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/irupana4"
-            android:id="@+id/imgsol" />
+            android:id="@+id/imageView2" />
 
         <TextView
             android:text="Barras de Chocolate"
@@ -38,4 +38,5 @@
             android:id="@+id/ingre"
             android:textSize="24sp" />
     </LinearLayout>
+
 </RelativeLayout>

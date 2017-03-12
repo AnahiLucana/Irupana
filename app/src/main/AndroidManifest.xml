@@ -39,7 +39,10 @@
         <activity
             android:name=".PanActivity"
             android:label="pan" />
-        <activity android:name=".barraChocolate"></activity>
+        <activity android:name=".barraChocolate" />
+        <activity android:name=".barrasFrutosRojos" />
+        <activity android:name=".barrasAjonjoli" />
+        <activity android:name=".barrasCoco"></activity>
     </application>
 
 </manifest>
