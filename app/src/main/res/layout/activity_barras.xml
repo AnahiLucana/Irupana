@@ -19,7 +19,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/irupana4"
-                android:id="@+id/Bdc" />
+                android:id="@+id/imgBcd" />
 
             <TextView
                 android:text="Barras de chocolate"
