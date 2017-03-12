@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:text="Miel de valle"
+        android:text="miel de valle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -16,14 +16,10 @@
         android:id="@+id/button"
         android:paddingBottom="10dp"
         android:paddingEnd="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingStart="10dp"
-        android:padding="10dp" />
+        android:paddingLeft="10dp" />
 
     <Button
-        android:text="Miel de yungas"
+        android:text="miel de yungas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button"
@@ -31,12 +27,5 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="64dp"
         android:layout_marginEnd="60dp"
-        android:id="@+id/button2"
-        android:padding="10dp"
-        android:paddingBottom="10dp"
-        android:paddingEnd="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingStart="10dp"
-        android:paddingTop="10dp" />
+        android:id="@+id/button2" />
 </RelativeLayout>

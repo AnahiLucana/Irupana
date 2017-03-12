@@ -9,8 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.anahi.irupana.MenuPrincipal"
-    android:background="?attr/colorBackgroundFloating">
+    tools:context="com.example.anahi.irupana.MenuPrincipal">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,11 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Menu"
-                android:textSize="30sp"
+                android:textSize="24sp"
                 android:textStyle="bold|italic"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/background_light"
-                android:background="@android:color/transparent" />
+                android:gravity="center_horizontal" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -44,26 +41,34 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"
+                    android:layout_height="170dp"
                     android:weightSum="1">
 
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:layout_weight="1" />
+
                     <ImageView
-                        android:layout_width="178dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="172dp"
+                        android:layout_height="wrap_content"
                         app:srcCompat="@drawable/productos_apicolas"
                         android:id="@+id/imgMiel" />
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="109dp"
                         app:srcCompat="@drawable/productos_cafe"
-                        android:id="@+id/imgCafe" />
+                        android:id="@+id/imgCafe"
+                        android:layout_marginTop="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="193dp">
 
                     <ImageView
                         android:layout_width="174dp"
@@ -76,8 +81,28 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/producto_panes"
                         android:id="@+id/imgPan"
+                        android:layout_weight="1"
+                        android:layout_marginTop="45dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="158dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/irupa5"
+                        android:id="@+id/imageView3"
                         android:layout_weight="1" />
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/irupa10"
+                        android:id="@+id/imageView2"
+                        android:layout_weight="1" />
                 </LinearLayout>
             </LinearLayout>
 

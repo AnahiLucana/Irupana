@@ -5,15 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-/**
- * Created by Ing. Rafael Serate on 04/03/17.
- */
+
 
 public class PanActivity extends AppCompatActivity {
 
     ListView ListView;
 
-    String[] valores = new String[]{"Pan Chamillo","Pan de semillas","Pan de Quinua","Pan de soya","Pan de Anis","Pan de avena","pan de Wilkaparu","pan molde"};
+    String[] valores = new String[]{"Pan Chamillo","Pan de semillas","Pan de Quinua"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
