@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:weightSum="1">
 
         <ImageView
             android:layout_width="match_parent"
@@ -29,14 +30,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/barrachoco"
-            android:textSize="18sp" />
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:gravity="center_horizontal" />
 
         <TextView
-            android:text="Ingredientes"
+            android:text="Ingredientes  "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ingre"
-            android:textSize="24sp" />
+            android:textAppearance="@style/TextAppearance.AppCompat" />
     </LinearLayout>
 
 </RelativeLayout>

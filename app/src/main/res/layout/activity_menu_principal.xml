@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anahi.irupana.MenuPrincipal"
-    android:background="?attr/colorBackgroundFloating">
+    android:background="@drawable/irupanafondobien">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,8 +27,8 @@
 
             <TextView
                 android:text="Menu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="366dp"
+                android:layout_height="53dp"
                 android:id="@+id/Menu"
                 android:textSize="30sp"
                 android:textStyle="bold|italic"
@@ -50,8 +50,10 @@
                     <ImageView
                         android:layout_width="178dp"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/productos_apicolas"
-                        android:id="@+id/imgMiel" />
+                        app:srcCompat="@drawable/productosApicolas"
+                        android:id="@+id/imgMiel"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
 
                     <ImageView
                         android:layout_width="match_parent"
