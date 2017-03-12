@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgCafe;
     private ImageView imgBarritas;
     private ImageView imgPan;
-
+    private ImageView logOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class MenuPrincipal extends AppCompatActivity {
         imgMiel=(ImageView)findViewById(R.id.imgMiel);
         imgPan=(ImageView)findViewById(R.id.imgPan);
         imgCafe=(ImageView)findViewById(R.id.imgCafe);
-
+        logOut=(ImageView)findViewById(R.id.logOut);
 
         imgBarritas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,28 +58,29 @@ public class MenuPrincipal extends AppCompatActivity {
         imgPan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent a = new Intent(context, PanActivity.class);
+                startActivity(a);
+            }
+        });
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 logout();
-
-
-                /*Intent a=new Intent(context,PanActivity.class);
-                startActivity(a);*/
             }
         });
 
-    }
+            private void logout() {
+                Toast.makeText(getApplicationContext(),
+                        "Cerrando sesión.", Toast.LENGTH_SHORT).show();
 
-    private void logout(){
-        Toast.makeText(getApplicationContext(),
-                "Cerrando sesión.", Toast.LENGTH_SHORT).show();
+                SharedPreferences prefs =
+                        getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
 
-        SharedPreferences prefs =
-                getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.clear();
-        editor.commit();
-        Intent a = new Intent(getApplicationContext(), MainActivity.class);
-        finish();
-        startActivity(a);
-    }
-}
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.clear();
+                editor.commit();
+                Intent a = new Intent(getApplicationContext(), MainActivity.class);
+                finish();
+                startActivity(a);
+            }
+        }
