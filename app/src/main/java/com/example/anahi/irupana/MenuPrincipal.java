@@ -20,6 +20,7 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgPan;
     private ImageView logOut;
     private ImageView imgOfertas;
+    private Button ubicarme;
 
 
     @Override
@@ -45,6 +46,13 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(a);
             }
 
+        });
+        ubicarme = (Button) findViewById(R.id.ubicarme);
+        ubicarme.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0){
+                Intent inten =new Intent(MenuPrincipal.this,MapsActivity.class);
+                startActivity(inten);
+            }
         });
 
         imgBarritas.setOnClickListener(new View.OnClickListener() {

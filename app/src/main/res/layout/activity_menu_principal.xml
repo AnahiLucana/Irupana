@@ -221,15 +221,13 @@
                                     android:id="@+id/imgTienda"
                                     android:layout_weight="0.58" />
 
-                                <TextView
-                                    android:text="Nuestras Tienda"
+                                <Button
+                                    android:text="ubicacion"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView"
-                                    android:gravity="center_horizontal"
-                                    android:textSize="24sp"
-                                    android:textStyle="normal|bold"
-                                    android:textColor="@android:color/black" />
+                                    android:id="@+id/ubicarme"
+                                    android:layout_weight="0.58" />
+
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
