@@ -19,23 +19,25 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgBarritas;
     private ImageView imgPan;
     private ImageView logOut;
+    private  ImageView imgOfertas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-        context=this;
-        imgBarritas=(ImageView)findViewById(R.id.imgBarritas);
-        imgMiel=(ImageView)findViewById(R.id.imgMiel);
-        imgPan=(ImageView)findViewById(R.id.imgPan);
-        imgCafe=(ImageView)findViewById(R.id.imgCafe);
-        logOut=(ImageView)findViewById(R.id.logOut);
+        context = this;
+        imgBarritas = (ImageView) findViewById(R.id.imgBarritas);
+        imgMiel = (ImageView) findViewById(R.id.imgMiel);
+        imgPan = (ImageView) findViewById(R.id.imgPan);
+        imgCafe = (ImageView) findViewById(R.id.imgCafe);
+        logOut = (ImageView) findViewById(R.id.logOut);
+        imgOfertas = (ImageView) findViewById(R.id.imgOfertas);
 
         imgBarritas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a=new Intent(context,BarrasActivity.class);
+                Intent a = new Intent(context, BarrasActivity.class);
                 startActivity(a);
             }
         });
@@ -43,7 +45,7 @@ public class MenuPrincipal extends AppCompatActivity {
         imgMiel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a=new Intent(context,MielActivity.class);
+                Intent a = new Intent(context, MielActivity.class);
                 startActivity(a);
             }
         });
@@ -51,7 +53,7 @@ public class MenuPrincipal extends AppCompatActivity {
         imgCafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a=new Intent(context,CafeActivity.class);
+                Intent a = new Intent(context, CafeActivity.class);
                 startActivity(a);
             }
         });
@@ -63,25 +65,46 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(a);
             }
         });
+
+
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 logout();
             }
+
         });
 
-            private void logout() {
-                Toast.makeText(getApplicationContext(),
-                        "Cerrando sesión.", Toast.LENGTH_SHORT).show();
-
-                SharedPreferences prefs =
-                        getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.clear();
-                editor.commit();
-                Intent a = new Intent(getApplicationContext(), MainActivity.class);
-                finish();
+        imgOfertas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(context, Ofertas.class);
                 startActivity(a);
             }
-        }
+        });
+
+
+
+
+
+    }
+
+
+
+      private void logout() {
+        Toast.makeText(getApplicationContext(),
+                "Cerrando sesión.", Toast.LENGTH_SHORT).show();
+
+        SharedPreferences prefs =
+                getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.clear();
+        editor.commit();
+        Intent a = new Intent(getApplicationContext(), MainActivity.class);
+        finish();
+        startActivity(a);
+
+    }
+ }
+

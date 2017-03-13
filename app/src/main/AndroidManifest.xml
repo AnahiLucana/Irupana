@@ -42,7 +42,8 @@
         <activity android:name=".barraChocolate" />
         <activity android:name=".barrasFrutosRojos" />
         <activity android:name=".barrasAjonjoli" />
-        <activity android:name=".barrasCoco"></activity>
+        <activity android:name=".barrasCoco" />
+        <activity android:name=".Ofertas"></activity>
     </application>
 
 </manifest>
