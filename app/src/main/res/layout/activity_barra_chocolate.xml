@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.anahi.irupana.barraChocolate">
+    tools:context="com.example.anahi.irupana.barraChocolate"
+    android:background="@drawable/irufonba">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +23,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/irupana4"
+            app:srcCompat="@drawable/cajachoco"
             android:id="@+id/imageView2" />
 
         <TextView
@@ -32,14 +33,17 @@
             android:id="@+id/barrachoco"
             android:textSize="24sp"
             android:textStyle="bold|italic"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:text="Ingredientes  "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ingre"
-            android:textAppearance="@style/TextAppearance.AppCompat" />
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
     </LinearLayout>
 
 </RelativeLayout>
