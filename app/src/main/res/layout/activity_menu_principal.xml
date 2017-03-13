@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anahi.irupana.MenuPrincipal"
-    android:background="?attr/colorBackgroundFloating">
+    android:background="@drawable/menuiru">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                         android:textSize="30sp"
                         android:textStyle="bold|italic"
                         android:gravity="center_horizontal"
-                        android:textColor="@android:color/background_light"
+                        android:textColor="@android:color/black"
                         android:background="@android:color/transparent" />
 
                     <LinearLayout
@@ -90,8 +90,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView8"
                                     android:gravity="center_horizontal"
-                                    android:textSize="18sp"
-                                    android:textStyle="normal|bold" />
+                                    android:textSize="24sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@android:color/black" />
 
                             </LinearLayout>
 
@@ -115,15 +116,16 @@
                                     android:id="@+id/textView7"
                                     android:layout_weight="0.16"
                                     android:gravity="center_horizontal"
-                                    android:textSize="18sp"
-                                    android:textStyle="normal|bold" />
+                                    android:textSize="24sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@android:color/black" />
                             </LinearLayout>
                         </LinearLayout>
 
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp">
+                            android:layout_height="227dp">
 
                             <LinearLayout
                                 android:orientation="vertical"
@@ -145,8 +147,9 @@
                                     android:id="@+id/textView4"
                                     android:layout_weight="0.04"
                                     android:gravity="center_horizontal"
-                                    android:textSize="18sp"
-                                    android:textStyle="normal|bold" />
+                                    android:textSize="24sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@android:color/black" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -157,7 +160,7 @@
 
                                 <ImageView
                                     android:layout_width="171dp"
-                                    android:layout_height="197dp"
+                                    android:layout_height="189dp"
                                     app:srcCompat="@drawable/producto_panes"
                                     android:id="@+id/imgPan" />
 
@@ -167,8 +170,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView5"
                                     android:gravity="center_horizontal"
-                                    android:textSize="18sp"
-                                    android:textStyle="normal|bold" />
+                                    android:textSize="24sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@android:color/black" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -192,13 +196,14 @@
                                     android:paddingRight="5dp" />
 
                                 <TextView
-                                    android:text="ofertas"
+                                    android:text="Ofertas "
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView3"
                                     android:gravity="center_horizontal"
                                     android:textSize="18sp"
-                                    android:textStyle="normal|bold" />
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@android:color/black" />
 
                             </LinearLayout>
 
@@ -217,13 +222,14 @@
                                     android:layout_weight="0.58" />
 
                                 <TextView
-                                    android:text="nuestras tiendas"
+                                    android:text="Nuestras Tienda"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView"
                                     android:gravity="center_horizontal"
-                                    android:textSize="18sp"
-                                    android:textStyle="normal|bold" />
+                                    android:textSize="24sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@android:color/black" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
