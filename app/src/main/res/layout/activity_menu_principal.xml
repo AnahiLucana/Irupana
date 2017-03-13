@@ -201,7 +201,7 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView3"
                                     android:gravity="center_horizontal"
-                                    android:textSize="18sp"
+                                    android:textSize="24sp"
                                     android:textStyle="normal|bold"
                                     android:textColor="@android:color/black" />
 
