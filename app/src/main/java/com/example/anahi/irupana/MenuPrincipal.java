@@ -21,6 +21,7 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView logOut;
     private ImageView imgOfertas;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
