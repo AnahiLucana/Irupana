@@ -225,8 +225,7 @@
                                     android:text="ubicacion"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/ubicarme"
-                                    android:layout_weight="0.58" />
+                                    android:id="@+id/ubicarme" />
 
                             </LinearLayout>
                         </LinearLayout>
