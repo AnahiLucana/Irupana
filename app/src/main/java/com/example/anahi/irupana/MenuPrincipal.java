@@ -20,6 +20,9 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgPan;
     private ImageView logOut;
     private ImageView imgOfertas;
+    private ImageView imgCarrito;
+    private ImageView imgTienda;
+
 
 
     @Override
@@ -35,7 +38,26 @@ public class MenuPrincipal extends AppCompatActivity {
         imgCafe = (ImageView) findViewById(R.id.imgCafe);
         logOut = (ImageView) findViewById(R.id.logOut);
         imgOfertas = (ImageView) findViewById(R.id.imgOfertas);
+        imgCarrito=(ImageView)findViewById(R.id.imgCarrito) ;
+        logOut = (ImageView) findViewById(R.id.logOut);
+        imgTienda=(ImageView)findViewById(R.id.imgTienda);
 
+
+        imgCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(context, CarritoActivity.class);
+                startActivity(a);
+            }
+        });
+
+        imgTienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(context, CarritoActivity.class);
+                startActivity(a);
+            }
+        });
 
 
         imgOfertas.setOnClickListener(new View.OnClickListener(){
@@ -44,7 +66,6 @@ public class MenuPrincipal extends AppCompatActivity {
                 Intent a = new Intent(context, Ofertas.class);
                 startActivity(a);
             }
-
         });
 
         imgBarritas.setOnClickListener(new View.OnClickListener() {

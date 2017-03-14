@@ -39,14 +39,24 @@
                         android:orientation="horizontal"
                         android:layout_width="341dp"
                         android:layout_height="64dp"
-                        android:gravity="right|end">
+                        android:gravity="right|end"
+                        android:weightSum="1">
 
                         <ImageView
-                            android:layout_width="340dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/carrito"
+                            android:id="@+id/imgCarrito"
+                            android:layout_width="100dp"
+                            android:layout_weight="0.32"
+                            android:layout_marginEnd="50dp" />
+
+                        <ImageView
+                            android:layout_width="194dp"
                             android:layout_height="64dp"
                             app:srcCompat="@drawable/logout"
                             android:id="@+id/logOut"
-                            android:paddingLeft="270dp" />
+                            android:paddingLeft="100dp" />
+
                     </LinearLayout>
 
                     <TextView
