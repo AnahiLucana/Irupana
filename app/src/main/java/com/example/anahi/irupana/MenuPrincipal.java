@@ -19,54 +19,23 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgBarritas;
     private ImageView imgPan;
     private ImageView logOut;
-    private ImageView imgOfertas;
-    private ImageView imgCarrito;
+    private  ImageView  imgOfertas;
     private ImageView imgTienda;
-
-
-
+    private ImageView imgCarrito;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
         context = this;
-
         imgBarritas = (ImageView) findViewById(R.id.imgBarritas);
         imgMiel = (ImageView) findViewById(R.id.imgMiel);
         imgPan = (ImageView) findViewById(R.id.imgPan);
         imgCafe = (ImageView) findViewById(R.id.imgCafe);
         logOut = (ImageView) findViewById(R.id.logOut);
-        imgOfertas = (ImageView) findViewById(R.id.imgOfertas);
-        imgCarrito=(ImageView)findViewById(R.id.imgCarrito) ;
-        logOut = (ImageView) findViewById(R.id.logOut);
+        imgOfertas=(ImageView)findViewById(R.id.imgOfertas);
         imgTienda=(ImageView)findViewById(R.id.imgTienda);
-
-
-        imgCarrito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent a = new Intent(context, CarritoActivity.class);
-                startActivity(a);
-            }
-        });
-
-        imgTienda.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent a = new Intent(context, CarritoActivity.class);
-                startActivity(a);
-            }
-        });
-
-
-        imgOfertas.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent a = new Intent(context, Ofertas.class);
-                startActivity(a);
-            }
-        });
+        imgCarrito=(ImageView)findViewById(R.id.imgCarrito);
 
         imgBarritas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,11 +52,24 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(a);
             }
         });
-
+        imgTienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(context, TiendaActivity.class);
+                startActivity(a);
+            }
+        });
         imgCafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent a = new Intent(context, CafeActivity.class);
+                startActivity(a);
+            }
+        });
+        imgCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(context, CarritoActivity.class);
                 startActivity(a);
             }
         });
@@ -98,35 +80,39 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(a);
             }
         });
-
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 logout();
+            }
+        });
+        imgOfertas.setOnClickListener(new View.OnClickListener(){
+            @Override
 
+            public void onClick(View view) {
+                Intent a = new Intent(context, Ofertas.class);
+                startActivity(a);
             }
         });
 
+
+
+
+
     }
 
+            private void logout() {
+                Toast.makeText(getApplicationContext(),
+                        "Cerrando sesión.", Toast.LENGTH_SHORT).show();
 
+                SharedPreferences prefs =
+                        getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
 
-
-
-
-
-    private void logout() {
-        Toast.makeText(getApplicationContext(),
-                "Cerrando sesión.", Toast.LENGTH_SHORT).show();
-
-        SharedPreferences prefs =
-                getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.clear();
-        editor.commit();
-        Intent a = new Intent(getApplicationContext(), MainActivity.class);
-        finish();
-        startActivity(a);
-    }
- }
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.clear();
+                editor.commit();
+                Intent a = new Intent(getApplicationContext(), MainActivity.class);
+                finish();
+                startActivity(a);
+            }
+        }

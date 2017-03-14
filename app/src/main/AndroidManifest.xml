@@ -50,7 +50,9 @@
         <activity
             android:name=".CarritoActivity"
             android:label="carrito" />
-
+        <activity
+            android:name=".TiendaActivity"
+            android:label="tienda" />
 
 
 
