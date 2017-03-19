@@ -52,13 +52,13 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(a);
             }
         });
-        imgTienda.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent a = new Intent(context, TiendaActivity.class);
-                startActivity(a);
-            }
-        });
+       // imgTienda.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            //public void onClick(View view) {
+               // Intent a = new Intent(context, TiendaActivity.class);
+             //   startActivity(a);
+           // }
+        //});
         imgCafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

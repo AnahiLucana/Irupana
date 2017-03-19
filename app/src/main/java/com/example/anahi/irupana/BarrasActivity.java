@@ -15,14 +15,9 @@ public class BarrasActivity extends AppCompatActivity {
 
     private Context context;
     private ImageView imgBcd;
-
-
-
-
-    ListView ListView;
-
-
-//String[] valores = new String[]{"Barra de Chocolate","barra de frutos rojos","barra de ajonjoli","barra de coco"};
+    private ImageView imgfr;
+    private ImageView imgAjon;
+    private ImageView imgcoco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +25,10 @@ public class BarrasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_barras);
         context = this;
         imgBcd=(ImageView)findViewById(R.id.imgBcd);
+        imgfr=(ImageView)findViewById(R.id.imgfr);
+        imgAjon=(ImageView)findViewById(R.id.imgAjon);
+        imgcoco=(ImageView)findViewById(R.id.imgcoco);
+
 
 
         imgBcd.setOnClickListener(new View.OnClickListener(){
@@ -39,25 +38,41 @@ public class BarrasActivity extends AppCompatActivity {
             Intent a=new Intent(context,barraChocolate.class);
             startActivity(a);
         }
-    });
+        });
+
+
+        imgfr.setOnClickListener(new View.OnClickListener(){
+            @Override
+
+            public void onClick(View view) {
+                Intent a=new Intent(context,barrasFrutosRojos.class);
+                startActivity(a);
+            }
+        });
+
+
+        imgAjon.setOnClickListener(new View.OnClickListener(){
+            @Override
+
+            public void onClick(View view) {
+                Intent a=new Intent(context,barrasAjonjoli.class);
+                startActivity(a);
+            }
+        });
+
+
+        imgcoco.setOnClickListener(new View.OnClickListener(){
+            @Override
+
+            public void onClick(View view) {
+                Intent a=new Intent(context,barrasCoco.class);
+                startActivity(a);
+            }
+        });
 
 
 
 
-
-
-
-
-
-    ListView = (ListView)findViewById(R.id.lista);
-
-
-
-
-
-
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,valores);
-        //ListView.setAdapter(adapter);
     }
 
 

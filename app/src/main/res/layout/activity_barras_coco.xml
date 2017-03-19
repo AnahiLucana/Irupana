@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_barras_coco"
     android:layout_width="match_parent"
@@ -10,4 +11,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anahi.irupana.barrasCoco">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cajacoco"
+        android:id="@+id/imageView7"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="Barras de coco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barracoco"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
 </RelativeLayout>

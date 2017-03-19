@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/cajachoco"
-            android:id="@+id/imageView2" />
+            android:id="@+id/imageView2"
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:text="Barras de Chocolate"
@@ -34,16 +35,18 @@
             android:textSize="24sp"
             android:textStyle="bold|italic"
             android:gravity="center_horizontal"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:text="Ingredientes  "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ingre"
+            android:id="@+id/ingreChoco"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/activity_vertical_margin" />
+            android:textSize="@dimen/activity_vertical_margin"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
 </RelativeLayout>
