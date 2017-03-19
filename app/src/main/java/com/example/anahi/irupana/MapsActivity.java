@@ -53,12 +53,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE );
         UiSettings uiSettings =mMap.getUiSettings();
         uiSettings.setZoomControlsEnabled(true);
+        uiSettings.setCompassEnabled(true);
+        uiSettings.setMyLocationButtonEnabled(true);
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-16.5090588,-68.16442213);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Irupana Andina").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
-       float zoomlevel=16;
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoomlevel));
+        LatLng irupana = new LatLng(-16.5090588,-68.16442213);
+        LatLng irupana2 = new LatLng(-16.5234726,-68.15933913);
+        LatLng irupana3 = new LatLng(-16.5407343,-68.080065817);
+        LatLng irupana4 = new LatLng(-16.5600568,-68.18711841352);
+        mMap.addMarker(new MarkerOptions().position(irupana2).title("Irupana").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        mMap.addMarker(new MarkerOptions().position(irupana).title("Irupana Andina").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+       mMap.addMarker(new MarkerOptions().position(irupana3).title("Irupana Andina").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        mMap.addMarker(new MarkerOptions().position(irupana4).title("Irupana Andina").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        float zoomlevel=16;
+
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(irupana,zoomlevel));
     }
 }
