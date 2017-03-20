@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="barraDeChoco">
+        <item> ingredientes:</item>
+        <item> extruido de cereales</item>
+        <item> chocolate</item>
+        <item>Hojuela de avena</item>
+        <item> Amaranto</item>
+        <item> azucar morena</item>
+    </string-array>
+    <string-array name="barraDeFrutos">
+        <item> ingredientes:</item>
+        <item> extruido de cereales</item>
+        <item> hojuelas de quinua</item>
+        <item> Chia</item>
+        <item> Amaranto</item>
+        <item> Frutos rojos</item>
+        <item> Azucar morena</item>
+    </string-array>
+    <string-array name="barraDeCoco">
+        <item> ingredientes:</item>
+        <item> extruido de cereales</item>
+        <item> hojuelas de quinua</item>
+        <item> coco</item>
+        <item> avena</item>
+        <item> azucar morena</item>
+    </string-array>
+    <string-array name="barraDeAjonjoli">
+        <item> ingredientes:</item>
+        <item> extruido de cereales</item>
+        <item> hojuelas de avena</item>
+        <item> Pasas</item>
+        <item> Amaranto</item>
+        <item> Ajonjoli</item>
+        <item> Chocolate</item>
+        <item> azucar morena</item>
+    </string-array>
+    
+    
+</resources>
