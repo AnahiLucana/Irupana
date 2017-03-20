@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_barras_ajonjoli"
     android:layout_width="match_parent"
@@ -10,4 +11,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anahi.irupana.barrasAjonjoli">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/cajaajonjoli"
+            android:id="@+id/imageView6"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:text="Barras de ajonjoli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold|italic"
+            android:textSize="24sp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
 </RelativeLayout>
