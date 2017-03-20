@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 
 public class BarrasActivity extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class BarrasActivity extends AppCompatActivity {
 
 
 
-
+    Spinner ingredientes;
     ListView ListView;
 
 
@@ -31,6 +32,22 @@ public class BarrasActivity extends AppCompatActivity {
         context = this;
         imgBcd=(ImageView)findViewById(R.id.imgBcd);
 
+        ingredientes=(Spinner)findViewById(R.id.sp1);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter1);
+
+        ingredientes=(Spinner)findViewById(R.id.sp2);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter2);
+
+        ingredientes=(Spinner)findViewById(R.id.sp3);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter3);
+
+        ingredientes=(Spinner)findViewById(R.id.sp4);
+        ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter4);
+        
 
         imgBcd.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -56,8 +73,6 @@ public class BarrasActivity extends AppCompatActivity {
 
 
 
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,valores);
-        //ListView.setAdapter(adapter);
     }
 
 
