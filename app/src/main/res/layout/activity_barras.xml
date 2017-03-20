@@ -25,74 +25,53 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="1">
+                    android:weightSum="1"
+                    android:layout_weight="0.28">
 
                     <ImageButton
-                        android:layout_width="139dp"
+                        android:layout_width="120dp"
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/cajachoco"
                         android:id="@+id/imgBcd"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="7dp" />
+                        android:layout_weight="0.41" />
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="184dp">
-
-                        <TextView
-                            android:text="Barra de chocolate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView12"
-                            android:textColor="@android:color/black"
-                            android:layout_marginTop="50dp"
-                            android:textSize="18sp" />
-
-                        <Spinner
-                            android:layout_width="165dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/sp1"
-                            android:backgroundTint="@color/colorPrimaryDark"
-                            android:layout_marginTop="10dp" />
-                    </LinearLayout>
+                    <TextView
+                        android:text="Barras de chocolate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tipobarra1"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:paddingStart="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/background_dark" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="100dp"
+                    android:layout_weight="0.23">
 
                     <ImageButton
-                        android:layout_width="139dp"
-                        android:layout_height="155dp"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
                         app:srcCompat="@drawable/cajafrutos"
                         android:id="@+id/imgfr"
-                        android:layout_marginBottom="7dp" />
+                        android:layout_weight="0.63" />
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:text="Barra de frutos rojos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView13"
-                            android:layout_marginTop="50dp"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
-
-                        <Spinner
-                            android:layout_width="166dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/sp2"
-                            android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/colorPrimaryDark" />
-                    </LinearLayout>
-
+                    <TextView
+                        android:text="Barras de frutos rojos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tipobarra2"
+                        android:layout_weight="0.68"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/activity_vertical_margin"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -102,34 +81,25 @@
                     android:layout_weight="0.03">
 
                     <ImageButton
-                        android:layout_width="140dp"
-                        android:layout_height="141dp"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
                         app:srcCompat="@drawable/cajaajonjoli"
                         android:id="@+id/imgAjon"
                         android:paddingEnd="10dp"
-                        android:paddingStart="15dp" />
+                        android:paddingStart="15dp"
+                        android:layout_weight="0.58" />
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:text="Barra de ajonjoli"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView14"
-                            android:layout_marginTop="50dp"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
-
-                        <Spinner
-                            android:layout_width="166dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/sp3"
-                            android:backgroundTint="@color/colorPrimaryDark"
-                            android:layout_marginTop="10dp" />
-                    </LinearLayout>
+                    <TextView
+                        android:text="Barras de ajonjoli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tipobarratres"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -137,36 +107,26 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="118dp"
-                    android:layout_weight="0.16"
-                    android:weightSum="1">
+                    android:layout_weight="0.16">
 
                     <ImageButton
-                        android:layout_width="142dp"
-                        android:layout_height="137dp"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
                         app:srcCompat="@drawable/cajacoco"
-                        android:id="@+id/imgcoco" />
+                        android:id="@+id/imgcoco"
+                        android:layout_weight="0.58" />
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:text="Barra de coco"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView15"
-                            android:layout_marginTop="50dp"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
-
-                        <Spinner
-                            android:layout_width="166dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/sp4"
-                            android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/colorPrimaryDark" />
-                    </LinearLayout>
+                    <TextView
+                        android:text="Barras de coco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tipobarracua"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 

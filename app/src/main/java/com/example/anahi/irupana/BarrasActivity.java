@@ -56,8 +56,6 @@ public class BarrasActivity extends AppCompatActivity {
 
 
 
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,valores);
-        //ListView.setAdapter(adapter);
     }
 
 
