@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "837346195222",
+    "firebase_url": "https://irupana-f025c.firebaseio.com",
+    "project_id": "irupana-f025c",
+    "storage_bucket": "irupana-f025c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837346195222:android:23f50e950c0c023b",
+        "android_client_info": {
+          "package_name": "com.example.anahi.irupana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837346195222-ho632rdor99kftfkmibs04mpbaj7htan.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-urcyeEKMJivI6lcDzoKR4zGLoFFnDh4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
