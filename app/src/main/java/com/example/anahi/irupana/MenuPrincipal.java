@@ -22,6 +22,7 @@ public class MenuPrincipal extends AppCompatActivity {
     private  ImageView  imgOfertas;
     private ImageView imgTienda;
     private ImageView imgCarrito;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

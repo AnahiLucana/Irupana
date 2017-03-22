@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView txtRegistrarse;
     private Context context;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -9,15 +9,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 
 public class BarrasActivity extends AppCompatActivity {
 
     private Context context;
     private ImageView imgBcd;
-    private ImageView imgfr;
-    private ImageView imgAjon;
-    private ImageView imgcoco;
+
+
+
+    Spinner ingredientes;
+    ListView ListView;
+
+
+//String[] valores = new String[]{"Barra de Chocolate","barra de frutos rojos","barra de ajonjoli","barra de coco"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +31,23 @@ public class BarrasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_barras);
         context = this;
         imgBcd=(ImageView)findViewById(R.id.imgBcd);
-        imgfr=(ImageView)findViewById(R.id.imgfr);
-        imgAjon=(ImageView)findViewById(R.id.imgAjon);
-        imgcoco=(ImageView)findViewById(R.id.imgcoco);
 
+        ingredientes=(Spinner)findViewById(R.id.sp1);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter1);
 
+        ingredientes=(Spinner)findViewById(R.id.sp2);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter2);
+
+        ingredientes=(Spinner)findViewById(R.id.sp3);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter3);
+
+        ingredientes=(Spinner)findViewById(R.id.sp4);
+        ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this,R.array.barraDeChoco,android.R.layout.simple_spinner_item);
+        ingredientes.setAdapter(adapter4);
+        
 
         imgBcd.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -38,37 +56,19 @@ public class BarrasActivity extends AppCompatActivity {
             Intent a=new Intent(context,barraChocolate.class);
             startActivity(a);
         }
-        });
+    });
 
 
-        imgfr.setOnClickListener(new View.OnClickListener(){
-            @Override
-
-            public void onClick(View view) {
-                Intent a=new Intent(context,barrasFrutosRojos.class);
-                startActivity(a);
-            }
-        });
 
 
-        imgAjon.setOnClickListener(new View.OnClickListener(){
-            @Override
-
-            public void onClick(View view) {
-                Intent a=new Intent(context,barrasAjonjoli.class);
-                startActivity(a);
-            }
-        });
 
 
-        imgcoco.setOnClickListener(new View.OnClickListener(){
-            @Override
 
-            public void onClick(View view) {
-                Intent a=new Intent(context,barrasCoco.class);
-                startActivity(a);
-            }
-        });
+
+
+    ListView = (ListView)findViewById(R.id.lista);
+
+
 
 
 
