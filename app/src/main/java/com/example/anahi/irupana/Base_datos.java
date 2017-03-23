@@ -23,14 +23,32 @@ public class Base_datos extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase db)
     {
         db.execSQL("create table usuarios (id integer primary key autoincrement not null, nombre varchar, apellido varchar, email varchar, password varchar, nit varchar);");
+
         db.execSQL("create table productos (id integer primary key autoincrement not null, titulo varchar, descripcion varchar, imagen integer, descripcion_larga varchar, precio double);");
         Log.d("Todos los tablas: ", "Se crearon las tablas");
 
-        /*ContentValues producto1=new ContentValues();
-        producto1.put("titulo","Miel de cania");
-        producto1.put("descripcion","Miel de cania");
-        producto1.put("imagen","Miel de cania");
-        db.insert("productos",null,producto1);*/
+
+        ContentValues producto1=new ContentValues();
+        ContentValues producto2=new ContentValues();
+
+        producto1.put("titulo","Miel del valle");
+        producto1.put("descripcion","670gr");
+        producto1.put("imagen","ximage");
+        producto1.put("descripcion_larga","Miel ");
+        producto1.put("precio","66bs");
+
+
+        db.insert("productos",null,producto1);
+
+
+
+        producto2.put("titulo","Miel del yungas");
+        producto2.put("descripcion","430gr");
+        producto2.put("imagen","ximage");
+        producto2.put("descripcion_larga","Miel ");
+        producto2.put("precio","46.5");
+
+        db.insert("productos",null,producto2);
 
     }
 
