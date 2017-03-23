@@ -131,6 +131,12 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/checkBox4"
                                         android:textSize="18sp" />
+
+                                    <Button
+                                        android:text="Button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/button6" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -147,7 +153,7 @@
                             android:text="Hacer pedido"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/button5"
+                            android:id="@+id/Hacerpedido"
                             android:textSize="24sp"
                             android:textStyle="normal|bold|italic" />
                     </LinearLayout>
