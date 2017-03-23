@@ -30,6 +30,8 @@ public class BarrasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barras);
         context = this;
+
+        //TODO Convertir en lista
         imgBcd=(ImageView)findViewById(R.id.imgBcd);
 
         ingredientes=(Spinner)findViewById(R.id.sp1);

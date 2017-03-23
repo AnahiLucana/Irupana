@@ -17,10 +17,10 @@ import java.util.ArrayList;
 public class Adaptador extends BaseAdapter
 {
     protected Activity activity;
-    protected ArrayList<TiposDePanes> items;
+    protected ArrayList<Producto> items;
 
     //Se crear el constructor
-    public Adaptador(Activity activity, ArrayList<TiposDePanes> items)
+    public Adaptador(Activity activity, ArrayList<Producto> items)
     {
         this.activity=activity;
         this.items=items;
@@ -72,7 +72,7 @@ public class Adaptador extends BaseAdapter
             holder=(ViewHolder)vista.getTag();
         }
 
-        TiposDePanes item=items.get(posicion);
+        Producto item=items.get(posicion);
         holder.titulo.setText(item.getTitulo());
         holder.descripcion.setText(item.getDescripcion());
         holder.imagen.setImageResource(item.getImagen());
