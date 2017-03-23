@@ -56,15 +56,20 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
                 String campo_repetir_password = txtTRepetirPassword.getText().toString();
                 String campo_nit = txtTNit.getText().toString();
 
-                //TODO validaciones
                 //TODO agregar en base de datos
-                //TODO que no sea un solo usuario
 
-                if (campo_password.compareTo("irupana") == 0 && campo_email.compareTo("irupana@gmail.com")==0&&
-                        campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
                     AlertDialog dialogo;
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeTiendaActivity.this);
+                if (campo_nombre.isEmpty()&& campo_nit.isEmpty() && campo_password.equals(campo_repetir_password)
+                        &&campo_email.isEmpty()) {
 
+                    builder.setMessage("El registro no se realizo correctamente");
+                    dialogo=builder.create();
+                    dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
+                    dialogo.show();
+
+                }
+                else {
                     builder.setTitle(campo_nombre);
                     builder.setMessage("Tu registro se realizo exitosamente");
                     dialogo = builder.create();
@@ -79,10 +84,6 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
                     startActivity(a);
                 }
             }
-
-
-
-
 
         });
     }
