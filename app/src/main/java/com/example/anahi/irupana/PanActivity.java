@@ -63,6 +63,7 @@ public class PanActivity extends AppCompatActivity {
         //Utilizamos el adaptador
         lista.setAdapter(adaptador);
 
+
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> array, View vista, int posicion,
                                     long id) {
