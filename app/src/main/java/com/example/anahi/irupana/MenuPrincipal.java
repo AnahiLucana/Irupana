@@ -19,7 +19,6 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgBarritas;
     private ImageView imgPan;
     private ImageView logOut;
-    private  ImageView  imgOfertas;
     private ImageView imgTienda;
     private ImageView imgCarrito;
     private ImageView imgOfertas;
