@@ -22,6 +22,9 @@ public class MenuPrincipal extends AppCompatActivity {
     private  ImageView  imgOfertas;
     private ImageView imgTienda;
     private ImageView imgCarrito;
+    private ImageView imgOfertas;
+    private Button ubicarme;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,25 @@ public class MenuPrincipal extends AppCompatActivity {
         imgOfertas=(ImageView)findViewById(R.id.imgOfertas);
         imgTienda=(ImageView)findViewById(R.id.imgTienda);
         imgCarrito=(ImageView)findViewById(R.id.imgCarrito);
+        imgOfertas = (ImageView) findViewById(R.id.imgOfertas);
+
+
+
+        imgOfertas.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(context, Ofertas.class);
+                startActivity(a);
+            }
+
+        });
+        ubicarme = (Button) findViewById(R.id.ubicarme);
+        ubicarme.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0){
+                Intent inten =new Intent(MenuPrincipal.this,MapsActivity.class);
+                startActivity(inten);
+            }
+        });
 
         imgBarritas.setOnClickListener(new View.OnClickListener() {
             @Override
