@@ -25,6 +25,9 @@ public class Base_datos extends SQLiteOpenHelper
         db.execSQL("create table usuarios (id integer primary key autoincrement not null, nombre varchar, apellido varchar, email varchar, password varchar, nit varchar);");
 
         db.execSQL("create table productos (id integer primary key autoincrement not null, titulo varchar, descripcion varchar, imagen integer, descripcion_larga varchar, precio double);");
+
+        db.execSQL("create table usuariostienda (id integer primary key autoincrement not null, nombre varchar, email varchar, password varchar, nit varchar);");
+
         Log.d("Todos los tablas: ", "Se crearon las tablas");
 
 

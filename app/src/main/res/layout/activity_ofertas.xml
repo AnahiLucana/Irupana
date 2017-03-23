@@ -16,66 +16,147 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="140dp">
+        <HorizontalScrollView
+            android:layout_width="956dp"
+            android:layout_height="506dp">
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="113dp">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:weightSum="1">
 
-                <ImageView
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="278dp"
+                    android:layout_height="472dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/promiel"
+                        android:id="@+id/imageView5"
+                        android:layout_weight="9.78" />
+
+                    <TextView
+                        android:text="Miel solo por este mes a :"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promiel"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="@dimen/activity_vertical_margin"
+                        android:textStyle="bold|italic"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="100 ml: 15bs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mieluno"
+                        android:textColorLink="@android:color/black"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold|italic"
+                        android:textSize="@dimen/activity_vertical_margin"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="200ml: 25bs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mieldos"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold|italic"
+                        android:textSize="@dimen/activity_vertical_margin"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="250ml:30bs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mieltres"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold|italic"
+                        android:textSize="@dimen/activity_vertical_margin"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <ImageView
+                        app:srcCompat="@drawable/cafeo"
+                        android:id="@+id/procafe"
+                        android:layout_width="312dp"
+                        android:layout_height="368dp"
+                        android:paddingTop="80dp"
+                        android:paddingBottom="90dp" />
+
+                    <TextView
+                        android:text="Cafe solo por esta semana a:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cafepro"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:layout_weight="0.04"
+                        android:textStyle="bold|italic"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:text="1Kg: 60bs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cafe"
+                        android:layout_weight="0.05"
+                        android:textColor="@color/cast_expanded_controller_background_color"
+                        android:textStyle="bold|italic"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/promiel"
-                    android:id="@+id/imageView5"
-                    android:layout_weight="1" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.32"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="260dp"
+                        app:srcCompat="@drawable/ofertasb"
+                        android:id="@+id/ofertasba"
+                        android:layout_height="200dp"
+                        android:layout_weight="0.61" />
+
+                    <TextView
+                        android:text=" Barritas de coco solo por esta semana a:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/barritas"
+                        android:layout_weight="0.06"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textStyle="bold|italic"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/barritasuno"
+                        android:layout_weight="0.07"
+                        android:text="20 unidades: 30bs."
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold|italic" />
+                </LinearLayout>
+
             </LinearLayout>
+        </HorizontalScrollView>
 
-            <TextView
-                android:text="Miel solo por este mes a :"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/promiel"
-                android:textColor="@android:color/holo_green_dark"
-                android:textSize="@dimen/activity_vertical_margin"
-                android:textStyle="bold|italic"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:text="100 ml: 15bs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/mieluno"
-                android:textColorLink="@android:color/black"
-                android:textColor="@android:color/black"
-                android:textStyle="bold|italic"
-                android:textSize="@dimen/activity_vertical_margin"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:text="200ml: 25bs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/mieldos"
-                android:textColor="@android:color/black"
-                android:textStyle="bold|italic"
-                android:textSize="@dimen/activity_vertical_margin"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:text="250ml:30bs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/mieltres"
-                android:textColor="@android:color/black"
-                android:textStyle="bold|italic"
-                android:textSize="@dimen/activity_vertical_margin"
-                android:gravity="center_horizontal" />
-        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
