@@ -78,69 +78,50 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="349dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.57"
+                            android:weightSum="1">
 
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="346dp"
-                                android:layout_height="71dp"
-                                android:weightSum="1"
-                                android:layout_marginTop="10dp">
-
-                                <CheckBox
-                                    android:text="Achumani"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/checkBox"
-                                    android:textSize="18sp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <CheckBox
-                                        android:text="Los Pinos"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/checkBox2"
-                                        android:textSize="18sp" />
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="350dp"
-                                android:layout_height="59dp">
-
-                                <CheckBox
-                                    android:text="Obrajes"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/checkBox3"
-                                    android:textSize="18sp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <CheckBox
-                                        android:text="Sopocachi"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/checkBox4"
-                                        android:textSize="18sp" />
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <CheckBox
-                                android:text="El Alto"
+                            <RadioGroup
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/checkBox5"
-                                android:textSize="18sp" />
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.31" >
 
+                                <RadioButton
+                                    android:text="Achumani"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/radioButton2"
+                                    android:layout_weight="1" />
+
+                                <RadioButton
+                                    android:text="Los pinos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/radioButton3"
+                                    android:layout_weight="1" />
+
+                                <RadioButton
+                                    android:text="Obrajes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/radioButton4"
+                                    android:layout_weight="1" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/radioButton5"
+                                    android:layout_weight="1"
+                                    android:text="Sopocachi" />
+
+                                <RadioButton
+                                    android:text="El Alto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/radioButton6"
+                                    android:layout_weight="1" />
+                            </RadioGroup>
                         </LinearLayout>
 
                         <Button
