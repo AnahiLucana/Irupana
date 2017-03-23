@@ -1,16 +1,30 @@
 package com.example.anahi.irupana;
 
 
-
+import com.google.gson.annotations.Expose;
 
 public class TiposDePanes {
-
+    //Agregar expose para serializacion
+    @Expose
     protected int id;
+
+    @Expose
     protected String titulo;
+
+    @Expose
     protected String descripcion;
+
+    @Expose
     protected int imagen;
+
+    @Expose
     protected String descripcionLarga;
+
+    @Expose
     protected double precio;
+
+    public TiposDePanes() {
+    }
 
     //Creamos el constructor
     public TiposDePanes(int id,String titulo, String descripcion, int imagen)
@@ -51,5 +65,21 @@ public class TiposDePanes {
 
     public void setImagen(int imagen) {
         this.imagen = imagen;
+    }
+
+    public String getDescripcionLarga() {
+        return descripcionLarga;
+    }
+
+    public void setDescripcionLarga(String descripcionLarga) {
+        this.descripcionLarga = descripcionLarga;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 }
