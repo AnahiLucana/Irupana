@@ -33,25 +33,25 @@ public class PanActivity extends AppCompatActivity {
         panChamillo.setId(1);
         panChamillo.setTitulo("Pan Chamillo");
         panChamillo.setDescripcion("Pan 100% de harina integral");
-        panChamillo.setDescripcionLarga("Descripción larga del pan chamillo");
-        panChamillo.setPrecio(11.50);
-        panChamillo.setImagen(android.R.drawable.ic_menu_camera);
+        panChamillo.setDescripcionLarga("El pan CHAMILLO es un delicioso pan integral muy saludable rico en fibra. Perfecto para compartir en familia ");
+        panChamillo.setPrecio(8 );
+        panChamillo.setImagen(R.drawable.chamillo);
 
         Producto panSemilla=new Producto();
         panSemilla.setId(2);
         panSemilla.setTitulo("Pan de semilla");
         panSemilla.setDescripcion("Pan con semillas de girasol, sesamo, linasa");
-        panSemilla.setDescripcionLarga("Descripción larga del pan de semilla");
-        panSemilla.setPrecio(20);
-        panSemilla.setImagen(android.R.drawable.ic_media_play);
+        panSemilla.setDescripcionLarga("Este pan de semillas de girasol, sesamo y linasa aporta al organismo nutrientes ");
+        panSemilla.setPrecio(10);
+        panSemilla.setImagen(R.drawable.semillas);
 
         Producto panQuinua=new Producto();
         panQuinua.setId(3);
         panQuinua.setTitulo("Pan de quinua");
         panQuinua.setDescripcion("Pan con harina de quinua");
-        panQuinua.setDescripcionLarga("Descripción larga del pan de quinua");
-        panQuinua.setPrecio(7);
-        panQuinua.setImagen(android.R.drawable.ic_menu_gallery);
+        panQuinua.setDescripcionLarga("Este delicioso pan es perfecto para la familia porque contiene el cereal andino mas nutritivo");
+        panQuinua.setPrecio(8);
+        panQuinua.setImagen(R.drawable.quinua);
 
         //Agregamos los panes creados a la lista
         items.add(panChamillo);
@@ -62,6 +62,7 @@ public class PanActivity extends AppCompatActivity {
         Adaptador adaptador=new Adaptador(PanActivity.this,items);
         //Utilizamos el adaptador
         lista.setAdapter(adaptador);
+
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> array, View vista, int posicion,

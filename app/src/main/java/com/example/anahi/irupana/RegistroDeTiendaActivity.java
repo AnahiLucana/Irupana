@@ -61,6 +61,7 @@ import android.widget.Toast;
                  //TODO validaciones
                  //TODO agregar en base de datos
                  //TODO que no sea un solo usuario
+                //TODO agregar en base de datos
 
 
                 guardarEnDb(campo_nombre,campo_password,campo_email,campo_nit);
@@ -86,7 +87,16 @@ import android.widget.Toast;
                         campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
                     AlertDialog dialogo;
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeTiendaActivity.this);
+                if (campo_nombre.isEmpty()&& campo_nit.isEmpty() && campo_password.equals(campo_repetir_password)
+                        &&campo_email.isEmpty()) {
 
+                    builder.setMessage("El registro no se realizo correctamente");
+                    dialogo=builder.create();
+                    dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
+                    dialogo.show();
+
+                }
+                else {
                     builder.setTitle(campo_nombre);
                     builder.setMessage("Tu registro se realizo exitosamente");
                     dialogo = builder.create();
@@ -118,5 +128,8 @@ import android.widget.Toast;
          SQLiteDatabase db = baseDatos.getWritableDatabase();
          db.insert("usuarios", null, values);
      }
+        });
+    }
+}
 
  }
