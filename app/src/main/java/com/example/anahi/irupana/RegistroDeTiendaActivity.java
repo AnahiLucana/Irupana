@@ -55,6 +55,11 @@ public class RegistroDeTiendaActivity  extends AppCompatActivity{
                 String campo_password = txtTPassword.getText().toString();
                 String campo_repetir_password = txtTRepetirPassword.getText().toString();
                 String campo_nit = txtTNit.getText().toString();
+
+                //TODO validaciones
+                //TODO agregar en base de datos
+                //TODO que no sea un solo usuario
+
                 if (campo_password.compareTo("irupana") == 0 && campo_email.compareTo("irupana@gmail.com")==0&&
                         campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0) {
                     AlertDialog dialogo;

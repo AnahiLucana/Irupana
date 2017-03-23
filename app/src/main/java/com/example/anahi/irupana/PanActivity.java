@@ -4,12 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.gson.Gson;
 
@@ -29,10 +26,10 @@ public class PanActivity extends AppCompatActivity {
 
 
         ListView lista=(ListView)findViewById(R.id.lista);
-        final ArrayList<TiposDePanes> items=new ArrayList<TiposDePanes>();
+        final ArrayList<Producto> items=new ArrayList<Producto>();
 
         //Todo agregue los campos precio y descripcion larga
-        TiposDePanes panChamillo=new TiposDePanes();
+        Producto panChamillo=new Producto();
         panChamillo.setId(1);
         panChamillo.setTitulo("Pan Chamillo");
         panChamillo.setDescripcion("Pan 100% de harina integral");
@@ -40,7 +37,7 @@ public class PanActivity extends AppCompatActivity {
         panChamillo.setPrecio(11.50);
         panChamillo.setImagen(android.R.drawable.ic_menu_camera);
 
-        TiposDePanes panSemilla=new TiposDePanes();
+        Producto panSemilla=new Producto();
         panSemilla.setId(2);
         panSemilla.setTitulo("Pan de semilla");
         panSemilla.setDescripcion("Pan con semillas de girasol, sesamo, linasa");
@@ -48,7 +45,7 @@ public class PanActivity extends AppCompatActivity {
         panSemilla.setPrecio(20);
         panSemilla.setImagen(android.R.drawable.ic_media_play);
 
-        TiposDePanes panQuinua=new TiposDePanes();
+        Producto panQuinua=new Producto();
         panQuinua.setId(3);
         panQuinua.setTitulo("Pan de quinua");
         panQuinua.setDescripcion("Pan con harina de quinua");
@@ -69,11 +66,11 @@ public class PanActivity extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> array, View vista, int posicion,
                                     long id) {
-                TiposDePanes objPan = items.get(posicion);
+                Producto objPan = items.get(posicion);
 
-                Intent a=new Intent(context,DetallePan.class);
+                Intent a=new Intent(context,DetalleProducto.class);
                 String strObjPan=new Gson().toJson(objPan); // Creamos un JSON con el pan seleccionado
-                a.putExtra("objPan",strObjPan); //Enviamos por intent con la clave objPan
+                a.putExtra("objProducto",strObjPan); //Enviamos por intent con la clave objPan
                 startActivity(a);
             }
         });

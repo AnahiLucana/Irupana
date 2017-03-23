@@ -2,9 +2,11 @@ package com.example.anahi.irupana;
 
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,7 +50,26 @@ public class RegistroDeClienteActivity extends AppCompatActivity{
                 String campo_repetir_password = txtCRepetirPassword.getText().toString();
                 String campo_nit = txtCNit.getText().toString();
 
-                if ( campo_nombre.compareTo("irupana")==0 && campo_apellido.compareTo("irupana")==0&& campo_email.compareTo ("irupana@gmail.com")==0
+                guardarEnDb(campo_nombre,campo_apellido,campo_password,campo_email,campo_nit);
+
+                AlertDialog dialogo;
+                AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeClienteActivity.this);
+
+                builder.setTitle(campo_nombre);
+                builder.setMessage("Tu registro se realizo exitosamente");
+                dialogo = builder.create();
+                dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
+                dialogo.show();
+                dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    public void onCancel(DialogInterface dialog) {
+                        dialog.dismiss();
+                    }
+                });
+                Intent a = new Intent(context, MenuPrincipal.class);
+                startActivity(a);
+
+
+                /*if ( campo_nombre.compareTo("irupana")==0 && campo_apellido.compareTo("irupana")==0&& campo_email.compareTo ("irupana@gmail.com")==0
                 && campo_nit.compareTo("00000")==0&&campo_repetir_password.compareTo("irupana")==0 && campo_password.compareTo("irupana")==0) {
                     AlertDialog dialogo;
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegistroDeClienteActivity.this);
@@ -65,13 +86,24 @@ public class RegistroDeClienteActivity extends AppCompatActivity{
                     });
                     Intent a = new Intent(context, MenuPrincipal.class);
                     startActivity(a);
-                }
+                }*/
             }
         });
 
 
     }
 
+    private void guardarEnDb(String nombre, String apellido, String password, String email, String nit){
+        ContentValues values=new ContentValues();
+        values.put("nombre",nombre);
+        values.put("apellido",apellido);
+        values.put("password",password);
+        values.put("email",email);
+        values.put("nit",nit);
 
+        Base_datos baseDatos=new Base_datos(context,1);
+        SQLiteDatabase db=baseDatos.getWritableDatabase();
+        db.insert("usuarios",null,values);
+    }
 
 }

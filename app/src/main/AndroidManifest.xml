@@ -75,7 +75,7 @@
         <activity
             android:name=".CarritoActivity"
             android:label="carrito" />
-        <activity android:name=".DetallePan"></activity>
+        <activity android:name=".DetalleProducto"></activity>
     </application>
 
 </manifest>

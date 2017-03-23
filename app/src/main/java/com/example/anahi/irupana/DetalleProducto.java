@@ -8,12 +8,12 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
-public class DetallePan extends AppCompatActivity {
+public class DetalleProducto extends AppCompatActivity {
 
     private TextView lblTitulo;
 
     private Context context;
-    private TiposDePanes objPan;
+    private Producto objProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +26,21 @@ public class DetallePan extends AppCompatActivity {
 
         //Recibimos todas las variables del intent
         Intent intent=getIntent();
-        if(intent.hasExtra("objPan")){ //Verificamos si tenemos algo con la clave objPan
+        if(intent.hasExtra("objProducto")){ //Verificamos si tenemos algo con la clave objProducto
 
             try {
-                String strObjPan=intent.getStringExtra("objPan"); //Recibo en un String el objeto serializado
-                objPan = new Gson().fromJson(strObjPan,TiposDePanes.class); //Convierto en objeto la cadena strObjPan (Deserializar)
+                String strObjPan=intent.getStringExtra("objProducto"); //Recibo en un String el objeto serializado
+                objProducto = new Gson().fromJson(strObjPan,Producto.class); //Convierto en objeto la cadena strObjPan (Deserializar)
                 
-                mostrarDetalles(objPan);
+                mostrarDetalles(objProducto);
             }catch (Exception ex){
 
             }
         }
     }
 
-    private void mostrarDetalles(TiposDePanes objPan) {
+    private void mostrarDetalles(Producto objPan) {
         lblTitulo.setText(objPan.getTitulo());
+        //TODO que muestres todos los items de detalle pan
     }
 }

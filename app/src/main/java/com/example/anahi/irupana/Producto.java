@@ -3,7 +3,7 @@ package com.example.anahi.irupana;
 
 import com.google.gson.annotations.Expose;
 
-public class TiposDePanes {
+public class Producto {
     //Agregar expose para serializacion
     @Expose
     protected int id;
@@ -23,11 +23,11 @@ public class TiposDePanes {
     @Expose
     protected double precio;
 
-    public TiposDePanes() {
+    public Producto() {
     }
 
     //Creamos el constructor
-    public TiposDePanes(int id,String titulo, String descripcion, int imagen)
+    public Producto(int id, String titulo, String descripcion, int imagen)
     {
         this.id=id;
         this.titulo=titulo;
