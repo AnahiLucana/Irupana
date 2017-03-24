@@ -43,6 +43,16 @@
                         android:gravity="right|end"
                         android:weightSum="1">
 
+                        <Button
+                            android:text="ubicacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ubicarme"
+                            android:background="@color/colorAccent"
+                            android:elevation="2dp"
+                            android:layout_weight="0.16"
+                            android:layout_marginTop="40dp" />
+
                         <ImageView
                             android:layout_width="103dp"
                             android:layout_height="wrap_content"
@@ -233,14 +243,6 @@
                                     app:srcCompat="@drawable/tienda"
                                     android:id="@+id/imgTienda"
                                     android:layout_weight="0.58" />
-
-                                <Button
-                                    android:text="ubicacion"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/ubicarme"
-                                    android:background="@color/colorAccent"
-                                    android:elevation="2dp" />
 
                             </LinearLayout>
                         </LinearLayout>

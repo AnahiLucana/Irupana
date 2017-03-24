@@ -40,8 +40,7 @@ public class MenuPrincipal extends AppCompatActivity {
         imgTienda=(ImageView)findViewById(R.id.imgTienda);
         imgCarrito=(ImageView)findViewById(R.id.imgCarrito);
         imgOfertas = (ImageView) findViewById(R.id.imgOfertas);
-
-
+        ubicarme = (Button) findViewById(R.id.ubicarme);
 
         imgOfertas.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -51,10 +50,11 @@ public class MenuPrincipal extends AppCompatActivity {
             }
 
         });
-        ubicarme = (Button) findViewById(R.id.ubicarme);
+
         ubicarme.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0){
-                Intent inten =new Intent(MenuPrincipal.this,MapsActivity.class);
+            @Override
+            public void onClick(View view){
+                Intent inten =new Intent(context, MapsActivity.class);
                 startActivity(inten);
             }
         });
