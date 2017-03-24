@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class RegistroDeClienteActivity extends AppCompatActivity {
+ public class RegistroDeClienteActivity extends AppCompatActivity{
 
     private Button btnCrearCuentaComoCliente;
     private Context context;
@@ -30,15 +30,15 @@ public class RegistroDeClienteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_de_cliente);
-        context = this;
-        btnCrearCuentaComoCliente = (Button) findViewById(R.id.btnCrearCuentaComoCliente);
-        txtCNombre = (EditText) findViewById(R.id.txtCNombre);
-        txtCApellido = (EditText) findViewById(R.id.txtCApellido);
-        txtCEmail = (EditText) findViewById(R.id.txtCEmail);
-        txtCPassword = (EditText) findViewById(R.id.txtCPassword);
-        txtCRepetirPassword = (EditText) findViewById(R.id.txtCRepetirPassword);
-        txtCNit = (EditText) findViewById(R.id.txtCNit);
-        DialogAnimado = (Button) findViewById(R.id.btnCrearCuentaComoCliente);
+        context=this;
+        btnCrearCuentaComoCliente=(Button)findViewById(R.id.btnCrearCuentaComoCliente);
+        txtCNombre=(EditText)findViewById(R.id.txtCNombre) ;
+        txtCApellido=(EditText)findViewById(R.id.txtCApellido) ;
+        txtCEmail=(EditText)findViewById(R.id.txtCEmail) ;
+        txtCPassword=(EditText)findViewById(R.id.txtCPassword);
+        txtCRepetirPassword=(EditText)findViewById(R.id.txtCRepetirPassword);
+        txtCNit=(EditText)findViewById(R.id.txtCNit);
+        DialogAnimado=(Button)findViewById(R.id.btnCrearCuentaComoCliente);
 
         btnCrearCuentaComoCliente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,10 +79,14 @@ public class RegistroDeClienteActivity extends AppCompatActivity {
 
                 }
 
-
             }
 
-            private void guardarEnDb(String nombre, String apellido, String password, String email, String nit) {
+        });
+
+    }
+
+
+     private void guardarEnDb(String nombre, String apellido, String password, String email, String nit) {
                 ContentValues values = new ContentValues();
                 values.put("nombre", nombre);
                 values.put("apellido", apellido);
@@ -93,8 +97,9 @@ public class RegistroDeClienteActivity extends AppCompatActivity {
                 Base_datos baseDatos = new Base_datos(context, 1);
                 SQLiteDatabase db = baseDatos.getWritableDatabase();
                 db.insert("usuarios", null, values);
+
             }
 
-        });
-    }
-}
+
+
+ }

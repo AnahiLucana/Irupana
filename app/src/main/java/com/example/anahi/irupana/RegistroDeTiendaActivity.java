@@ -128,8 +128,7 @@ import android.widget.Toast;
          SQLiteDatabase db = baseDatos.getWritableDatabase();
          db.insert("usuarios", null, values);
      }
-        });
-    }
-}
 
- }
+    }
+
+
