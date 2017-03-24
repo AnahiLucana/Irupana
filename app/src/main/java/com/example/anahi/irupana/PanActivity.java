@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -17,12 +18,22 @@ import java.util.ArrayList;
 public class PanActivity extends AppCompatActivity {
 
     private Context context;
+    private Button Comprar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panes);
 
         context=this;
+
+        Comprar = (Button) findViewById(R.id.ubicarme);
+        Comprar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0){
+                Intent inten =new Intent(PanActivity.this,activity_carrito.class);
+                startActivity(inten);
+            }
+        });
 
 
         ListView lista=(ListView)findViewById(R.id.lista);
