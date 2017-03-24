@@ -36,7 +36,7 @@ public class Base_datos extends SQLiteOpenHelper
 
         producto1.put("titulo","Miel del valle");
         producto1.put("descripcion","670gr");
-        producto1.put("imagen","ximage");
+        producto1.put("imagen","mielvalle");
         producto1.put("descripcion_larga","Miel ");
         producto1.put("precio","66bs");
 
@@ -47,7 +47,7 @@ public class Base_datos extends SQLiteOpenHelper
 
         producto2.put("titulo","Miel del yungas");
         producto2.put("descripcion","430gr");
-        producto2.put("imagen","ximage");
+        producto2.put("imagen","mielyunga");
         producto2.put("descripcion_larga","Miel ");
         producto2.put("precio","46.5");
 
