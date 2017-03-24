@@ -4,16 +4,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.vision.text.Text;
 import com.google.gson.Gson;
 
 public class DetalleProducto extends AppCompatActivity {
 
-    private TextView lblTitulo;
+    private TextView titulo;
 
     private Context context;
     private Producto objProducto;
+    private TextView descripcionLarga;
+    private TextView precio;
+    private TextView imagen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +27,10 @@ public class DetalleProducto extends AppCompatActivity {
         setContentView(R.layout.activity_detalle_pan);
 
         context=this;
-        lblTitulo=(TextView)findViewById(R.id.lblTitulo);
+        titulo=(TextView)findViewById(R.id.Titulo);
+        descripcionLarga=(TextView)findViewById(R.id.descripcion);
+        precio=(TextView)findViewById(R.id.precio);
+        imagen= (ImageView)findViewById(R.id.imagen);
 
 
         //Recibimos todas las variables del intent
@@ -40,7 +49,15 @@ public class DetalleProducto extends AppCompatActivity {
     }
 
     private void mostrarDetalles(Producto objPan) {
-        lblTitulo.setText(objPan.getTitulo());
-        //TODO que muestres todos los items de detalle pan
+        titulo.setText(objPan.getTitulo());
+        descripcionLarga.setText(objPan.getDescripcion());
+        //precio.setText(objPan.getPrecio());
+        imagen.setText(objPan.getImagen());
+
+
+
+
+
+
     }
 }
